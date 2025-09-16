@@ -74,6 +74,16 @@
     <button class="button" role="button">
         <h3 class="ButtonTitle">Cube</h3>
               <span class="button_model">
+                <model-viewer src="./Laptop/mvlaptop.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="./Laptop/poster.webp" 
+                interaction-prompt="none" class="model" id="resizable-boxa" disable-tap disable-pan disable-zoom="true" shadow-intensity="1">
+                </model-viewer>
+              </span>
+    </button>
+  </div>  
+  <div class="grid-btn">
+    <button class="button" role="button">
+        <h3 class="ButtonTitle">Cube</h3>
+              <span class="button_model">
                 <model-viewer src="./Cubeassets/Untitled.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="./Cubeassets/poster.webp" 
                 interaction-prompt="none" class="model" id="resizable-boxa" disable-tap disable-pan disable-zoom="true" shadow-intensity="1">
                 </model-viewer>
@@ -262,7 +272,7 @@
 
 <script src="./script.js"></script>
 
-
+  <script src="./Cubeassets/script.js"></script>
     <script src="./Cubeassets/script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
@@ -292,4 +302,5 @@
 </body>
 
 </html>
+
 
