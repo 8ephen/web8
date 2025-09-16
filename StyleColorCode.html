@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Elements</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Elements">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="StyleColorCode.css" rel="stylesheet"/>
+</head>
+<body id="elementToChange">
+<div class="container-items">
+  <button
+    id="CN1"
+    class="item-color"
+    style="--color: #e11d48"
+    aria-color="#e11d48"
+  ></button>
+  <button
+    id="CN2"
+    class="item-color"
+    style="--color: #f472b6"
+    aria-color="#f472b6"
+  ></button>
+  <button
+     id="CN3"
+    class="item-color"
+    style="--color: #fb923c"
+    aria-color="#fb923c"
+  ></button>
+  <button
+    id="CN4"  
+    class="item-color"
+    style="--color: #facc15"
+    aria-color="#facc15"
+  ></button>
+  <button
+      id="CN5"
+    class="item-color"
+    style="--color: #84cc16"
+    aria-color="#84cc16"
+  ></button>
+  <button
+      id="CN6"
+    class="item-color"
+    style="--color: #10b981"
+    aria-color="#10b981"
+  ></button>
+  <button
+      id="CN7"
+    class="item-color"
+    style="--color: #0ea5e9"
+    aria-color="#0ea5e9"
+  ></button>
+  <button
+      id="CN8"
+    class="item-color"
+    style="--color: #3b82f6"
+    aria-color="#3b82f6"
+  ></button>
+  <button
+      id="CN9"
+    class="item-color"
+    style="--color: #8b5cf6"
+    aria-color="#8b5cf6"
+  ></button>
+  <button
+      id="CN10"
+    class="item-color"
+    style="--color: #a78bfa"
+    aria-color="#a78bfa"
+  ></button>
+</div>
+
+</body>
+
+
+
+<script>
+  const hoveredElement1 = document.getElementById('CN1');
+  const hoveredElement2 = document.getElementById('CN2');
+  const hoveredElement3 = document.getElementById('CN3');
+  const hoveredElement4 = document.getElementById('CN4');
+  const hoveredElement5 = document.getElementById('CN5');
+  const hoveredElement6 = document.getElementById('CN6');
+  const hoveredElement7 = document.getElementById('CN7');
+  const hoveredElement8 = document.getElementById('CN8');
+  const hoveredElement9 = document.getElementById('CN9');
+  const hoveredElement10 = document.getElementById('CN10');
+  const elementToChange = document.getElementById('elementToChange');
+
+
+  
+  hoveredElement1.addEventListener('mouseleave', () => {
+    elementToChange.style.backgroundColor = 'white'; // Revert to original color or another color
+  });
+  hoveredElement1.addEventListener('mouseenter', () => {
+    elementToChange.style.backgroundColor = "#e11d48"; // Set the desired color
+  });
+    hoveredElement2.addEventListener('mouseenter', () => {
+    elementToChange.style.backgroundColor = "#f472b6"; // Revert to original color or another color
+  });
+  hoveredElement3.addEventListener('mouseenter', () => {
+    elementToChange.style.backgroundColor = "#fb923c"; // Revert to original color or another color
+  });
+  hoveredElement4.addEventListener('mouseenter', () => {
+    elementToChange.style.backgroundColor = "#facc15"; // Revert to original color or another color
+  });
+  hoveredElement5.addEventListener('mouseenter', () => {
+    elementToChange.style.backgroundColor = "#84cc16"; // Revert to original color or another color
+  });
+  hoveredElement6.addEventListener('mouseenter', () => {
+    elementToChange.style.backgroundColor = "#10b981"; // Revert to original color or another color
+  });
+  hoveredElement7.addEventListener('mouseenter', () => {
+    elementToChange.style.backgroundColor = "#0ea5e9"; // Revert to original color or another color
+  });
+  hoveredElement8.addEventListener('mouseenter', () => {
+    elementToChange.style.backgroundColor = "#3b82f6"; // Revert to original color or another color
+  });
+  hoveredElement9.addEventListener('mouseenter', () => {
+    elementToChange.style.backgroundColor = "#8b5cf6"; // Revert to original color or another color
+  });
+  hoveredElement10.addEventListener('mouseenter', () => {
+    elementToChange.style.backgroundColor = "#a78bfa"; // Revert to original color or another color
+  });
+
+</script>
