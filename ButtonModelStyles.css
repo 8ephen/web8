@@ -1,23 +1,71 @@
+/* Program bar button styles matching site theme */
+.program-btn {
+  background-color: white;
+  color: #1565c0;
+  border-radius: 10em;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0.5em 0.5em;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 #1565c0;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+  letter-spacing: 1px;
+}
+.program-btn:hover {
+  background: #e3f2fd;
+  color: #1565c0;
+  border-color: #1565c0;
+  transform: translateY(-2px) scale(1.05);
+}
+.program-btn:active {
+  background: #bbdefb;
+  color: #1976d2;
+  border-color: #1976d2;
+  transform: scale(0.98);
+}
+/* Blue slider styles */
+#size-slider {
+  accent-color: #2196f3;
+}
+input[type=range]#size-slider::-webkit-slider-thumb {
+  background: #2196f3;
+}
+input[type=range]#size-slider::-webkit-slider-runnable-track {
+  background: #90caf9;
+  border-Radius: 10px;
+}
+input[type=range]#size-slider::-moz-range-thumb {
+  background: #2196f3;
+}
+input[type=range]#size-slider::-moz-range-track {
+  background: #90caf9;
+}
+input[type=range]#size-slider::-ms-thumb {
+  background: #2196f3;
+}
+input[type=range]#size-slider::-ms-fill-lower {
+  background: #90caf9;
+}
+input[type=range]#size-slider::-ms-fill-upper {
+  background: #90caf9;
+}
 :not(:defined) > * {
   display: none;
 }
 
-html {
-  margin: 50px;
-}
-
 .clip-text {
-  background: url(./Site_Photos/Site_Photos_ProjectTextBackground1.webp);
+  background: url(/Site_Photos/Site_Photos_ProjectTextBackground1.webp);
   background-size: cover;
   background-attachment: fixed;
   position: sticky;
   -webkit-background-clip: text;
   color: transparent; 
   box-sizing: border-box;
-  font-size: 150px;
+  font-size: 10vw;
   font-weight: bold;
   position: relative;
-
   line-height: 100px;
   flex-shrink: 0;
   z-index: 4;
@@ -249,15 +297,14 @@ flex-grow: 1;
   padding: 20px;
   border: 2px solid #1da1f2;;
   margin: 10px;
-  background-color: lightgray;
+  background-color: #ffffff;
 }
 
 
 
  body {
             font-family: sans-serif;
-            margin: 0;
-            background-color: #f0f0f0;
+            background-color: #ffffff;
         }
 
         .grid-container {
@@ -286,7 +333,7 @@ flex-grow: 1;
 
         h3 {
             margin-top: 0;
-            color: #1da1f2;;
+            color: #1da1f2;
         }
 
         p {
@@ -327,3 +374,88 @@ flex-grow: 1;
 
         /* From Uiverse.io by imtausef */ 
 
+#Applications{
+  position:relative;
+  height: 60vw;
+  
+  display: flex;
+  justify-content: center;
+}
+.LapAppsTitle {
+  Position: relative;
+  color: #1da1f2;
+  font-size: clamp(1px, 8vw, 77px);
+  text-align:center;
+  top:clamp(5px, 8vw, 60px);
+  margin:auto;
+}
+.computer{
+  height: 50vw; 
+  width: 50vw; 
+  left:-10px;
+  position: relative; 
+  max-width:600px; 
+  max-height:600px;
+  vertical-align: bottom;
+
+}
+.Description{
+  position:relative;
+  margin-left: auto;
+  top:clamp(5px, 10vw, 120px);
+  vertical-align: top;
+  
+}
+h1{
+    font-size: clamp(0rem, 3vw, 2rem);
+}
+h4{
+  display: list-item;
+  left: 2em;
+  font-size: clamp(0rem, 2vw, 1rem);
+}
+/* From Uiverse.io by sekaiking */ 
+.slideButton1 {
+  background-color: white;
+  color:  #1565c0;
+  border-radius: 10em;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0.5em 0.5em;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 black;
+}
+
+.slideButton1:hover {
+  transform: translateY(-4px) translateX(2px);
+  box-shadow: -2px 5px 0 0 black;
+}
+
+.slideButton1:active {
+  transform: translateY(2px) translateX(-1px);
+  box-shadow: 0 0 0 0 black;
+}
+#explain-it-btn {
+  background-color: white;
+  color:  #1565c0;
+  border-radius: 10em;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0.5em 0.5em;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 black;
+}
+
+#explain-it-btn:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+}
+
+#explain-it-btn:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+}
