@@ -6,9 +6,9 @@
     <meta name="description" content="Elements">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" href="ButtonModelStyles.css" rel="stylesheet"/>
-    <link type="text/css" href="ButtonModelStyles.css" rel="stylesheet"/>
     <link type="text/css" href="ProfileStyles.css" rel="stylesheet"/>
     <script src="./script.js"></script>
+    
 
 
     <style>
@@ -35,16 +35,16 @@
      }
 
      #slider-container {
-        width: 160px; position:fixed; bottom:40px; 
+        width: auto; position:fixed; bottom:60px; 
         left:50%; transform:translateX(-50%); 
         background:#fff; padding:10px; border-radius:111px; 
         box-shadow:0 2px 8px rgba(0,0,0,0.2); z-index:1000;
-        height: 20px;
-      }
+        height: Auto;
+      } 
       #size-slider {
-        position: relative;
+        justify-content: center;
         left: 50%;
-        transform: translateX(-50%);
+        
       }
 
 
@@ -54,15 +54,66 @@
   <body>
 
 
-  <div ></div>
+  <div style="height: 1200px;" ></div>
 
-  <div id="slider-container">
-    <label for="grid-size-slider" id="mslider">-</label>
-    <input type="range" id="size-slider" min="18" max="90" value="25" step="0.1">
-    <label for="grid-size-slider" id="pslider">+</label>
+<div id="slider-container" style="display: table-row;">
+  <div style="display: flex; align-items: center; width: 100%; gap: 0;">
+    <button class="slideButton1" id="take-apart-btn" style="min-width:120px;">Take it Apart</button>
+    <div style="display: flex; align-items: center; justify-content: center; flex: 1; gap: 8px; margin: 0 24px;">
+      
+      <input type="range" id="size-slider" min="26" max="90" initial="26" step="0.1">
+     
+    </div>
+    <button class="slideButton2" id="explain-it-btn" style="min-width:120px;">Explain it</button>
   </div>
+  <!-- Removed slider percentage display -->
+</div>
+<div id="program-bar" style="position: fixed; bottom: 60px; left: 50%; transform: translateX(-50%); width: 80vw; background: #fff; padding: 10px; border-radius: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; overflow-x: auto; white-space: nowrap; display: flex; justify-content: flex-start; align-items: center; scrollbar-width: none;">
+  <button class="program-btn">SolidWorks</button>
+  <button class="program-btn">Matlab</button>
+  <button class="program-btn">Visual Studio Code</button>
+  <button class="program-btn">Creality Scan</button>
+  <button class="program-btn">CSS</button>
+  <button class="program-btn">Python</button>
+  <button class="program-btn">JavaScript</button>
+  <button class="program-btn">C++</button>
+  <button class="program-btn">HTML</button>
+  <button class="program-btn">More...</button>
+</div>
+<h1 class="LapAppsTitle">Program Knowledge</h1>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var bar = document.getElementById('program-bar');
+        // Mouse wheel horizontal scroll
+        bar.addEventListener('wheel', function(e) {
+          if (bar.scrollWidth > bar.clientWidth) {
+            e.preventDefault();
+            bar.scrollLeft += e.deltaY;
+          }
+        }, { passive: false });
+      });
+    </script>
+
+
+
+<div id="Applications">  
+    <model-viewer src="./Laptop/mvlaptop.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="./Laptop/poster.webp" 
+        interaction-prompt="none"  Class="computer" disable-tap disable-pan disable-zoom="true" shadow-intensity="1"camera-orbit="65.52deg 76.52deg 16m" >
+    </model-viewer>
+    <div style="width:40vw;max-width: 600px">
+    <h1 class="Description"></h1>
+    <h4 class="Description">
+      Complex mold generation for rubber-silicon seals
+    </h4>
+    </div>
+</div>
+
+
+
     <!-- Header Text -->
-    <div class="container" style="margin-bottom: 30px;">
+    <div class="container" id="design-section" style="margin-bottom: 30px;">
       <div class="clip-text">
         Designs
       </div>
@@ -76,16 +127,6 @@
               <span class="button_model">
                 <model-viewer src="./Laptop/mvlaptop.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="./Laptop/poster.webp" 
                 interaction-prompt="none" class="model" id="resizable-boxa" disable-tap disable-pan disable-zoom="true" shadow-intensity="1"camera-orbit="65.52deg 76.52deg 17.83m" field-of-view="30deg">
-                </model-viewer>
-              </span>
-    </button>
-  </div>  
-  <div class="grid-btn">
-    <button class="button" role="button">
-        <h3 class="ButtonTitle">Cube</h3>
-              <span class="button_model">
-                <model-viewer src="./Cubeassets/Untitled.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="./Cubeassets/poster.webp" 
-                interaction-prompt="none" class="model" id="resizable-boxa" disable-tap disable-pan disable-zoom="true" shadow-intensity="1">
                 </model-viewer>
               </span>
     </button>
@@ -124,27 +165,27 @@
 
 
   <section class="grid-container">
-        <a class="grid-item3" role="button" href="websiteCat.html" style="text-decoration: none;" >
+        <a class="grid-item3" role="button" href="/websiteCat.html" style="text-decoration: none;" >
             <span class="grid2Title">Web-Tools</span>
             <p>Cataloge of useful websites for design and. All free to use</p>
         </a>    
-        <a class="grid-item3" role="button" href="./Tools/Tools_Solidworks_DrawingsToPNG.swp" style="text-decoration: none;" download="Tools_Solidworks_DrawingsToPNG.swp">
+        <a class="grid-item3" role="button" href="/Tools/Tools_Solidworks_DrawingsToPNG.swp" style="text-decoration: none;" download="Tools_Solidworks_DrawingsToPNG.swp">
             <span class="grid2Title">Drawing 2 PNG</span>
             <p>Solidworks _ Export all drawing sheets as PNGs. VBA macro code files</p>
         </a>
-        <a class="grid-item3" role="button" href="./Tools/Tools_Solidworks_ORingGenerator.SLDPRT" style="text-decoration: none;" download="Tools_Solidworks_ORingGenerator.SLDPRT">
+        <a class="grid-item3" role="button" href="/Tools/Tools_Solidworks_ORingGenerator.SLDPRT" style="text-decoration: none;" download="Tools_Solidworks_ORingGenerator.SLDPRT">
             <span class="grid2Title">Custom O-Rings</span>
             <p>Solidworks _ O-Ring rubber silicon Mold Generator from Diameter and thickness</p>
         </a>
-        <a class="grid-item3" role="button" href="./ForceGuageModels.html" style="text-decoration: none;" >
+        <a class="grid-item3" role="button" href="/ForceGuageModels.html" style="text-decoration: none;" >
             <span class="grid2Title">Force Guage Models</span>
             <p>Solidworks _ 3D model of personal force gauge for automation of specification documents</p>
         </a>
-        <a class="grid-item3" role="button" href="./SpecDocDecals" style="text-decoration: none;" >
+        <a class="grid-item3" role="button" href="/SpecDocDecals" style="text-decoration: none;" >
             <span class="grid2Title">Spec Doc Decals</span>
             <p>This is the first feature in our grid section. It's awesome and super useful.</p>
         </a>
-        <a class="grid-item3" role="button" href="./StyleColorCode.html" style="text-decoration: none;" >
+        <a class="grid-item3" role="button" href="/StyleColorCode.html" style="text-decoration: none;" >
             <span class="grid2Title">Color Palette</span>
             <p>Personal color palette for clothing reference</p>
         </a>
@@ -272,8 +313,9 @@
 
 <script src="./script.js"></script>
 
-  <script src="./Cubeassets/script.js"></script>
+
     <script src="./Cubeassets/script.js"></script>
+    <script src="./Laptop/script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
@@ -298,10 +340,7 @@
       sizeValue.textContent = newSize + '%';
       gap.style.columnGap = (newSize / 2) + 'vw';
     });
+
   </script>
 </body>
-
 </html>
-
-
-
